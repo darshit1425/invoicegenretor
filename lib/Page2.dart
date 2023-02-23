@@ -190,13 +190,13 @@ class _screen2State extends State<screen2> {
                         TextField(
                           controller: txt_price,
                           decoration: const InputDecoration(
-                            hintText: 'Enter Price',
+                            hintText: 'Enter Price products',
                           ),
                         ),
                         TextField(
                           controller: txt_qty,
                           decoration: const InputDecoration(
-                            hintText: 'Enter QTY',
+                            hintText: 'Enter QTY of products',
                           ),
                         ),
                       ],
@@ -229,7 +229,7 @@ class _screen2State extends State<screen2> {
             },
             icon: Icon(
               Icons.edit,
-              color: Colors.green.shade300,
+              color: Colors.deepPurpleAccent,
             ),
           ),
           IconButton(
@@ -242,7 +242,7 @@ class _screen2State extends State<screen2> {
             },
             icon: Icon(
               Icons.delete,
-              color: Colors.red,
+              color: Colors.black,
             ),
           ),
         ],
