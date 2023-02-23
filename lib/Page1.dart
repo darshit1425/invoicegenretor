@@ -11,10 +11,10 @@ class screen1 extends StatefulWidget {
 }
 
 class _screen1State extends State<screen1> {
-  TextEditingController txtname = TextEditingController();
-  TextEditingController txtEmail = TextEditingController();
+  TextEditingController txtnameproduct = TextEditingController();
+  TextEditingController txtPrice = TextEditingController();
   TextEditingController txtaddres = TextEditingController();
-  TextEditingController txtphone = TextEditingController();
+  TextEditingController txtname = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -23,12 +23,14 @@ class _screen1State extends State<screen1> {
         appBar: AppBar(
           backgroundColor: Colors.white,
           centerTitle: true,
-          title: Text("invoice zenretor",
-              style: GoogleFonts.aBeeZee(
-                  fontSize: 26,
-                  color: Colors.black,
-                  wordSpacing: 1,
-                  letterSpacing: 1)),
+          title: Text(
+            "invoice zenretor",
+            style: GoogleFonts.aBeeZee(
+                fontSize: 26,
+                color: Colors.black,
+                wordSpacing: 1,
+                letterSpacing: 1),
+          ),
         ),
         body: Padding(
           padding: EdgeInsets.all(10),
@@ -49,12 +51,12 @@ class _screen1State extends State<screen1> {
                   height: 8,
                 ),
                 TextFormField(
-                  controller: txtname,
+                  controller: txtnameproduct,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(15)),
                     hintText: 'Enter a Name term',
-                    labelText: "name",
+                    labelText: "nameproducts",
                     labelStyle: TextStyle(fontSize: 19, color: Colors.grey),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15),
@@ -66,12 +68,12 @@ class _screen1State extends State<screen1> {
                   height: 20,
                 ),
                 TextFormField(
-                  controller: txtEmail,
+                  controller: txtPrice,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(15)),
-                    hintText: 'Ex. xyz@gmail.com',
-                    labelText: "Email",
+                    hintText: 'Ex. products price',
+                    labelText: "Price",
                     labelStyle: TextStyle(fontSize: 19, color: Colors.grey),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15),
@@ -100,7 +102,7 @@ class _screen1State extends State<screen1> {
                   height: 20,
                 ),
                 TextFormField(
-                  controller: txtphone,
+                  controller: txtname,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15),
@@ -119,12 +121,15 @@ class _screen1State extends State<screen1> {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    Modalclass m1 = Modalclass(addres: txtaddres.text,Email: txtEmail.text,name: txtname.text,phone: txtphone.text);
-                    Navigator.pushNamed(context, '2',arguments: m1);
+                    Modalclass m1 = Modalclass(
+                        Price: txtPrice.text,
+                        nameproduct: txtnameproduct.text,
+                        name: txtname.text);
+                    Navigator.pushNamed(context, '2', arguments: m1);
                   },
                   style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: 40.0, vertical: 20.0),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
                     primary: Colors.white10,
                   ),
                   child: Text(

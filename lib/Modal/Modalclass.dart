@@ -1,6 +1,6 @@
 class Modalclass
 {
-  String?name,Email,addres,phone;
+  String?nameproduct,Price,name;
 
-  Modalclass({this.name, this.Email, this.addres, this.phone});
+  Modalclass({this.nameproduct, this.Price, this.name});
 }
